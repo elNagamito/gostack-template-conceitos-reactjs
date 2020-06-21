@@ -5,11 +5,13 @@
 }
 
 body {
+  margin: auto;
+  width: 50%;
   font-size: 14px;
+  background-color: #7159c1;
 }
 
 div {
-  width: 100%;
   margin: 20px;
 }
 
@@ -23,12 +25,13 @@ div li + li {
 }
 
 button {
-  background: #7159c1;
+  background: green;
   color: #fff;
   border: 0;
   padding: 10px 15px;
   cursor: pointer;
   margin-top: 15px;
+  border-radius: 6px;
   font-weight: bold;
   font-size: 14px;
 }
@@ -36,4 +39,38 @@ button {
 div li button {
   margin: 0 15px;
   background: #ca4949;
+}
+
+li {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+#techName {
+  width: fit-content;
+  background-color: green;
+  margin-top: 6px;
+  margin-left: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+  border-radius: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#techs {
+  display: flex;
+  flex-direction: row;
+  margin-left: initial;
+}
+
+#listContainer{
+  width: 500px;
 }

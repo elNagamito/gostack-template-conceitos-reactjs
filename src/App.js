@@ -16,7 +16,8 @@ function App() {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: `Repositório ${Date.now()}`
+      title: `Repositório ${Date.now()}`,
+      techs: ['NodeJS', 'React', 'ReactNative']
     });
 
     const repository = response.data;
@@ -34,9 +35,18 @@ function App() {
     <div>
       <ul data-testid="repository-list">
         {repositories.map(repository =>
-          <li key={repository.id}> {repository.title}
+          <li key={repository.id}> 
+            <div id="listContainer">
+              <h4>{repository.title}</h4>
+              <div id="techs">
+              {repository.techs.map(techs =>
+                  <h5 id='techName'>{techs}</h5>
+              )}
+              </div>
+            </div>
             <button onClick={() => handleRemoveRepository(repository.id)}> Remover </button>
-          </li>)}
+          </li>
+        )}
       </ul>
 
       <button onClick={handleAddRepository}>Adicionar</button>
